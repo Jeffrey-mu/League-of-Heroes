@@ -12,9 +12,8 @@ axios.get('https://game.gtimg.cn/images/lol/act/img/js/heroList/hero_list.js').t
 </script>
 
 <template>
-  <div w-80vw h-75vh flex="~ wrap" ma>
-    <Heroe v-for="hero, key in heroseList" :key="key" :herose="hero" />
-    <Goods v-for="hero, key in heroseList" :key="key" :herose="hero" />
+  <div w-95vw h-75vh flex="~ wrap justify-evenly" ma>
+    <Heroe v-for="hero, key in heroseList" v-show="!activeType || hero.roles.includes(activeType)" :key="key" :herose="hero" />
   </div>
 </template>
 

@@ -9,7 +9,9 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const HeroType: typeof import('./composables/Heroes')['HeroType']
   const activeMenu: typeof import('./composables/LeftMenu')['activeMenu']
+  const activeType: typeof import('./composables/Heroes')['activeType']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']
   const computed: typeof import('vue')['computed']
@@ -38,6 +40,7 @@ declare global {
   const getCurrentScope: typeof import('vue')['getCurrentScope']
   const h: typeof import('vue')['h']
   const handleMenu: typeof import('./composables/LeftMenu')['handleMenu']
+  const handleType: typeof import('./composables/Heroes')['handleType']
   const ignorableWatch: typeof import('@vueuse/core')['ignorableWatch']
   const inject: typeof import('vue')['inject']
   const isDark: typeof import('./composables/dark')['isDark']
@@ -275,7 +278,9 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly HeroType: UnwrapRef<typeof import('./composables/Heroes')['HeroType']>
     readonly activeMenu: UnwrapRef<typeof import('./composables/LeftMenu')['activeMenu']>
+    readonly activeType: UnwrapRef<typeof import('./composables/Heroes')['activeType']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
     readonly autoResetRef: UnwrapRef<typeof import('@vueuse/core')['autoResetRef']>
     readonly computed: UnwrapRef<typeof import('vue')['computed']>
@@ -304,6 +309,7 @@ declare module '@vue/runtime-core' {
     readonly getCurrentScope: UnwrapRef<typeof import('vue')['getCurrentScope']>
     readonly h: UnwrapRef<typeof import('vue')['h']>
     readonly handleMenu: UnwrapRef<typeof import('./composables/LeftMenu')['handleMenu']>
+    readonly handleType: UnwrapRef<typeof import('./composables/Heroes')['handleType']>
     readonly ignorableWatch: UnwrapRef<typeof import('@vueuse/core')['ignorableWatch']>
     readonly inject: UnwrapRef<typeof import('vue')['inject']>
     readonly isDark: UnwrapRef<typeof import('./composables/dark')['isDark']>
