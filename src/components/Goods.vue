@@ -9,14 +9,7 @@ defineProps({
 
 <template>
   <div w-40 h-60 m-2 border class="hero_item">
-    <a href="" flex="~ col center">
-      <div h-52 overflow="hidden" b-rd-1>
-        <img :src="herose.image" alt="">
-      </div>
-      <div z-2 c-white>
-        {{ herose.name }}
-      </div>
-    </a>
+    <h2>goods</h2>
   </div>
 </template>
 
