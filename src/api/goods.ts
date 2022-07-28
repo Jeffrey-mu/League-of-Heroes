@@ -3,7 +3,7 @@ import { GOODS_PATH } from '~/composables/goods'
 import { useStore } from '~/store/state'
 export function getGoodsData() {
   const state = useStore()
-  if (state.goodsList.length)
+  if (state.goodsList && state.goodsList.length)
     return state.goodsList
 
   const [data, error] = useFetch<GOODS_STRUT<GOODS_ITME>>(GOODS_PATH)

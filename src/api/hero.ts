@@ -3,7 +3,7 @@ import { HeroPath, IMG_URL } from '~/composables/Heroes'
 import { useStore } from '~/store/state'
 export function getData() {
   const state = useStore()
-  if (state.horeList.length)
+  if (state.horeList && state.horeList.length)
     return state.horeList
 
   const [data, error] = useFetch<HERO_LIST<HEOR_ITME>>(HeroPath)

@@ -7,14 +7,10 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
-    copy: typeof import('./components/Heroes copy.vue')['default']
     Counter: typeof import('./components/Counter.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
     Goods: typeof import('./components/Goods.vue')['default']
     Header: typeof import('./components/Header.vue')['default']
     Hero: typeof import('./components/Hero.vue')['default']
-    Heroe: typeof import('./components/Heroe.vue')['default']
-    Heroes: typeof import('./components/Heroes.vue')['default']
     LefeMenu: typeof import('./components/LefeMenu.vue')['default']
     README: typeof import('./components/README.md')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
