@@ -9,7 +9,9 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const HeroPath: typeof import('./composables/Heroes')['HeroPath']
   const HeroType: typeof import('./composables/Heroes')['HeroType']
+  const IMG_URL: typeof import('./composables/Heroes')['IMG_URL']
   const activeMenu: typeof import('./composables/LeftMenu')['activeMenu']
   const activeType: typeof import('./composables/Heroes')['activeType']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
@@ -157,7 +159,7 @@ declare global {
   const useEventSource: typeof import('@vueuse/core')['useEventSource']
   const useEyeDropper: typeof import('@vueuse/core')['useEyeDropper']
   const useFavicon: typeof import('@vueuse/core')['useFavicon']
-  const useFetch: typeof import('@vueuse/core')['useFetch']
+  const useFetch: typeof import('./composables/fetch')['useFetch']
   const useFileDialog: typeof import('@vueuse/core')['useFileDialog']
   const useFileSystemAccess: typeof import('@vueuse/core')['useFileSystemAccess']
   const useFocus: typeof import('@vueuse/core')['useFocus']
@@ -278,7 +280,9 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly HeroPath: UnwrapRef<typeof import('./composables/Heroes')['HeroPath']>
     readonly HeroType: UnwrapRef<typeof import('./composables/Heroes')['HeroType']>
+    readonly IMG_URL: UnwrapRef<typeof import('./composables/Heroes')['IMG_URL']>
     readonly activeMenu: UnwrapRef<typeof import('./composables/LeftMenu')['activeMenu']>
     readonly activeType: UnwrapRef<typeof import('./composables/Heroes')['activeType']>
     readonly asyncComputed: UnwrapRef<typeof import('@vueuse/core')['asyncComputed']>
@@ -426,7 +430,7 @@ declare module '@vue/runtime-core' {
     readonly useEventSource: UnwrapRef<typeof import('@vueuse/core')['useEventSource']>
     readonly useEyeDropper: UnwrapRef<typeof import('@vueuse/core')['useEyeDropper']>
     readonly useFavicon: UnwrapRef<typeof import('@vueuse/core')['useFavicon']>
-    readonly useFetch: UnwrapRef<typeof import('@vueuse/core')['useFetch']>
+    readonly useFetch: UnwrapRef<typeof import('./composables/fetch')['useFetch']>
     readonly useFileDialog: UnwrapRef<typeof import('@vueuse/core')['useFileDialog']>
     readonly useFileSystemAccess: UnwrapRef<typeof import('@vueuse/core')['useFileSystemAccess']>
     readonly useFocus: UnwrapRef<typeof import('@vueuse/core')['useFocus']>

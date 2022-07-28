@@ -1,6 +1,19 @@
 interface HeroTypeI {
 
 }
+export  const HeroPath: string = 'https://game.gtimg.cn/images/lol/act/img/js/heroList/hero_list.js'
+export const IMG_URL = 'https://game.gtimg.cn/images/lol/act/img/skinloading/'
+export interface HERO_LIST<T> {
+  ileName: string;
+  fileTime: string;
+  hero: T[];
+  version: string;
+}
+export interface HEOR_ITME {
+  image: string;
+  heroId: number;
+  roles: string[]
+}
 export const HeroType: HeroTypeI = [
   {
     name: '全部',
