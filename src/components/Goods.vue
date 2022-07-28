@@ -7,26 +7,34 @@ const { goods } = defineProps({
 })
 const TipMore = ref()
 const goodsCard = ref()
-const position = ref({
-  x: 0,
-  y: 0,
-})
+
+const position = ref(
+  {
+    x: 0,
+    y: 0,
+  },
+)
 const show = ref(false)
 const avatarUrl = goods.iconPath
-const { isLoading } = useImage({ src: avatarUrl }, { delay: 2000 })
+const { isLoading } = useImage(
+  { src: avatarUrl },
+  { delay: 2000 },
+)
 const mouseEnter = function (e: MouseEvent) {
   const { x: mousex, y: mousey } = e
   if (!show.value) {
     show.value = true
     nextTick(() => {
       const { innerWidth, innerHeight } = window as any
+      const { offsetWidth, offsetHeight } = TipMore.value
 
       position.value = {
         x: mousex + 20, y: mousey + 20,
       }
-      const { offsetWidth, offsetHeight } = TipMore.value
+
       if (innerWidth - mousex < offsetWidth)
         position.value.x = mousex - offsetWidth
+
       if (innerHeight - mousey < offsetHeight)
         position.value.y = mousey - offsetHeight
     })

@@ -5,7 +5,9 @@ interface RESPONSE<T> {
   status: number
   message?: string
 }
-export function useFetch<T>(url: string, method = 'GET', params = {}): [Ref<T>, Ref<string>] {
+export function useFetch<T>(
+  url: string, method = 'GET', params = {},
+): [Ref<T>, Ref<string>] {
   const data = ref()
   const error = ref('')
   axios({

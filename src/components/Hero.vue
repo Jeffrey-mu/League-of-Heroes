@@ -6,7 +6,10 @@ const { herose } = defineProps({
   },
 })
 const avatarUrl = herose.image
-const { isLoading } = useImage({ src: avatarUrl }, { delay: 2000 })
+const { isLoading } = useImage(
+  { src: avatarUrl },
+  { delay: 2000 },
+)
 </script>
 
 <template>
