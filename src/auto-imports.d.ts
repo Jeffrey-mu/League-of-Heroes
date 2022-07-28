@@ -9,6 +9,7 @@ declare global {
   const $shallowRef: typeof import('vue/macros')['$shallowRef']
   const $toRef: typeof import('vue/macros')['$toRef']
   const EffectScope: typeof import('vue')['EffectScope']
+  const GOODS_PATH: typeof import('./composables/goods')['GOODS_PATH']
   const HeroPath: typeof import('./composables/Heroes')['HeroPath']
   const HeroType: typeof import('./composables/Heroes')['HeroType']
   const IMG_URL: typeof import('./composables/Heroes')['IMG_URL']
@@ -222,6 +223,7 @@ declare global {
   const useStepper: typeof import('@vueuse/core')['useStepper']
   const useStorage: typeof import('@vueuse/core')['useStorage']
   const useStorageAsync: typeof import('@vueuse/core')['useStorageAsync']
+  const useStore: typeof import('./store/state')['useStore']
   const useStyleTag: typeof import('@vueuse/core')['useStyleTag']
   const useSwipe: typeof import('@vueuse/core')['useSwipe']
   const useTemplateRefsList: typeof import('@vueuse/core')['useTemplateRefsList']
@@ -280,6 +282,7 @@ declare module '@vue/runtime-core' {
     readonly $shallowRef: UnwrapRef<typeof import('vue/macros')['$shallowRef']>
     readonly $toRef: UnwrapRef<typeof import('vue/macros')['$toRef']>
     readonly EffectScope: UnwrapRef<typeof import('vue')['EffectScope']>
+    readonly GOODS_PATH: UnwrapRef<typeof import('./composables/goods')['GOODS_PATH']>
     readonly HeroPath: UnwrapRef<typeof import('./composables/Heroes')['HeroPath']>
     readonly HeroType: UnwrapRef<typeof import('./composables/Heroes')['HeroType']>
     readonly IMG_URL: UnwrapRef<typeof import('./composables/Heroes')['IMG_URL']>
@@ -493,6 +496,7 @@ declare module '@vue/runtime-core' {
     readonly useStepper: UnwrapRef<typeof import('@vueuse/core')['useStepper']>
     readonly useStorage: UnwrapRef<typeof import('@vueuse/core')['useStorage']>
     readonly useStorageAsync: UnwrapRef<typeof import('@vueuse/core')['useStorageAsync']>
+    readonly useStore: UnwrapRef<typeof import('./store/state')['useStore']>
     readonly useStyleTag: UnwrapRef<typeof import('@vueuse/core')['useStyleTag']>
     readonly useSwipe: UnwrapRef<typeof import('@vueuse/core')['useSwipe']>
     readonly useTemplateRefsList: UnwrapRef<typeof import('@vueuse/core')['useTemplateRefsList']>
