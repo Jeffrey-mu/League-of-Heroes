@@ -1,12 +1,12 @@
 
 <script setup lang="ts">
-import {getData} from '~/api/hero'
-const heroseList = getData()
+import { getData } from "~/api/hero";
+const heroseList = getData();
 </script>
 <template>
-  <div w-95vw h-75vh flex="~ wrap justify-evenly" ma >
-    <Heroe
-        v-for="(hero, key) in heroseList"
+  <div w-95vw h-75vh flex="~ wrap justify-evenly" ma>
+    <Hero
+      v-for="(hero, key) in heroseList"
       v-show="!activeType || hero.roles.includes(activeType)"
       :key="key"
       :herose="hero"
