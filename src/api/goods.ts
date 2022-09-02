@@ -1,4 +1,4 @@
-import type { GOODS_ITME, GOODS_STRUT } from '~/composables/goods'
+import type { GOODS_ITME, GOODS_STRUCT } from '~/composables/goods'
 import { GOODS_PATH } from '~/composables/goods'
 import { useStore } from '~/store/state'
 export function getGoodsData() {
@@ -6,7 +6,7 @@ export function getGoodsData() {
   if (state.goodsList && state.goodsList.length)
     return state.goodsList
 
-  const [data, error] = useFetch<GOODS_STRUT<GOODS_ITME>>(GOODS_PATH)
+  const [data, error] = useFetch<GOODS_STRUCT<GOODS_ITME>>(GOODS_PATH)
   if (error.value)
     throw new Error(error.value)
 

@@ -7,7 +7,7 @@ const goodsList = getGoodsData()
 </script>
 
 <template>
-  <div w-95vw h-75vh flex="~ wrap justify-evenly" ma>
+  <div w-95vw h-85vh flex="~ wrap" justify-center ma>
     <Hero
       v-for="(hero, key) in heroseList"
       v-show="activeMenu === GLOBAL.HERO && (!activeType || hero.roles.includes(activeType))"

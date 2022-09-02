@@ -1,4 +1,4 @@
-import type { HEOR_ITME, HERO_LIST } from '~/composables/Heroes'
+import type { HEOR_ITME, HERO_STRUCT } from '~/composables/Heroes'
 import { HeroPath, IMG_URL } from '~/composables/Heroes'
 import { useStore } from '~/store/state'
 export function getData() {
@@ -6,7 +6,7 @@ export function getData() {
   if (state.horeList && state.horeList.length)
     return state.horeList
 
-  const [data, error] = useFetch<HERO_LIST<HEOR_ITME>>(HeroPath)
+  const [data, error] = useFetch<HERO_STRUCT<HEOR_ITME>>(HeroPath)
   const heroseList = computed(() => {
     if (!error.value) {
       data.value?.hero.map((el) => {

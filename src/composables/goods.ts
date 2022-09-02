@@ -1,5 +1,5 @@
 export const GOODS_PATH = 'https://game.gtimg.cn/images/lol/act/img/js/items/items.js'
-export interface GOODS_STRUT<T> {
+export interface GOODS_STRUCT<T> {
   fileName: string
   fileTime: string
   items: T[]

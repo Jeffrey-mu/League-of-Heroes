@@ -3,7 +3,7 @@ interface HeroTypeI {
 }
 export const HeroPath = 'https://game.gtimg.cn/images/lol/act/img/js/heroList/hero_list.js'
 export const IMG_URL = 'https://game.gtimg.cn/images/lol/act/img/skinloading/'
-export interface HERO_LIST<T> {
+export interface HERO_STRUCT<T> {
   ileName: string
   fileTime: string
   hero: T[]
